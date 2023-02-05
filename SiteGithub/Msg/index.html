@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mensagens Bíblicas Aleatórias</title>
+    <title>Fotos</title>
     <script>
       function displayRandomImage() {
         var xhr = new XMLHttpRequest();
@@ -11,6 +11,30 @@
             var response = JSON.parse(xhr.responseText);
             var imageUrl = response.urls.regular;
             document.getElementById("randomImage").src = imageUrl;
+          }
+        };
+        xhr.send();
+      }
+      function displayRandomImage1() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=DCDrOEiDqi_MpRowTK6Mz5iQy85Swz3TxEKCJP3OrVk&query=bible%20message", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var imageUrl = response.urls.regular;
+            document.getElementById("randomImage1").src = imageUrl;
+          }
+        };
+        xhr.send();
+      }
+      function displayRandomImage2() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=DCDrOEiDqi_MpRowTK6Mz5iQy85Swz3TxEKCJP3OrVk&query=bible%20message", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var imageUrl = response.urls.regular;
+            document.getElementById("randomImage2").src = imageUrl;
           }
         };
         xhr.send();
@@ -49,9 +73,21 @@
     </style>
   </head>
   <body onload="displayRandomImage()">
-    <h1>Mensagem Bíblica Aleatória</h1>
+    <h1>Fotos Aleatórias</h1>
     <img id="randomImage" />
-    <button onclick="displayRandomImage()">Mudar Mensagem</button>
+    <button onclick="displayRandomImage()">Mudar Imagem</button>
+  </body>
+
+  <body onload="displayRandomImage1()">
+    <h1>Fotos Aleatórias de Pássaros</h1>
+    <img id="randomImage1" />
+    <button onclick="displayRandomImage()">Mudar Imagem</button>
+  </body>
+
+  <body onload="displayRandomImage2()">
+    <h1>Fotos Aleatórias de Gatos</h1>
+    <img id="randomImage2" />
+    <button onclick="displayRandomImage()">Mudar Imagem</button>
   </body>
 </html>
 
