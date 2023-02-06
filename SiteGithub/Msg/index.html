@@ -51,7 +51,7 @@
       }
       function displayRandomImage3() 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=WsEKoOkvPUW722ZJTSy837yOu8GCl3FfrIeQ7hWHSkp720JfYKoV3lLS&query=tree", true);
+        xhr.open("GET", "https://api.pexels.com/v1/random/?client_id=WsEKoOkvPUW722ZJTSy837yOu8GCl3FfrIeQ7hWHSkp720JfYKoV3lLS&query=tree", true);
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4 && xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
