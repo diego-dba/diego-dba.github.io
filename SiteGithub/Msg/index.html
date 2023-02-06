@@ -49,6 +49,17 @@
         };
         xhr.send();
       }
+      function displayRandomImage3() 
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=WsEKoOkvPUW722ZJTSy837yOu8GCl3FfrIeQ7hWHSkp720JfYKoV3lLS&query=tree", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            var imageUrl = response.urls.regular;
+            document.getElementById("randomImage3").src = imageUrl;
+          }
+          xhr.send();
+        };
     </script>
     <style>
       /* Estilo do corpo da página */
@@ -56,8 +67,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 20px;
+        margin-top: 40px;
+        margin-bottom: 60px;
         background-color: #E5F5E0;
-        height: 100vh;
         box-shadow: 0px 0px 10px #333;
         }
 
@@ -117,6 +130,12 @@
     </div>
     <div>
     <button onclick="displayRandomImage2()">Mudar Imagem</button>
+    </div>
+    <h1>Fotos Aleatórias de Árvores</h1>
+    <img id="randomImage3" />
+    </div>
+    <div>
+    <button onclick="displayRandomImage3()">Mudar Imagem</button>
     </div>
   </body>
 </html>
