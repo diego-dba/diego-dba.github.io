@@ -56,34 +56,41 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: lightgray;
+        background-color: #E5F5E0;
         height: 100vh;
-      }
-      /* Estilo para o título */
-      h1 {
+        box-shadow: 0px 0px 10px #333;
+        }
+
+        h1 {
+        align-items: center;
         font-size: 36px;
         margin-top: 40px;
-        color: #333;
-      }
-      /* Estilo para a imagem */
-      img {
+        color: #1A5226;
+        text-shadow: 2px 2px #6B9A7D;
+        }
+
+        img {
+        align-items: center;
         border: 10px solid #fff;
         box-shadow: 0px 0px 10px #333;
         height: 300px;
         width: 500px;
         object-fit: cover;
-      }
-      /* Estilo para o botão */
-      button {
+        border-radius: 5px;
+        }
+
+        button {
+        align-items: center;
         padding: 10px 20px;
         font-size: 20px;
-        background-color: #333;
+        background-color: #4D8C57;
         color: #fff;
         border: none;
         border-radius: 5px;
         margin-top: 20px;
         cursor: pointer;
-      }
+        box-shadow: 2px 2px #9BCE91;
+        }
     </style>
   </head>
   <body onload="displayRandomImage(); displayRandomImage1(); displayRandomImage2();">
@@ -92,17 +99,23 @@
     <h1>Fotos Aleatórias</h1>
     <!-- Imagem para exibir a mensagem bíblica aleatória -->
     <img id="randomImage" />
+    </div>
+    <div>
     <!-- Botão para alterar a imagem -->
     <button onclick="displayRandomImage()">Mudar Imagem</button>
     </div>
     <div>
     <h1>Fotos Aleatórias de Pássaros</h1>
     <img id="randomImage1" />
+    </div>
+    <div>
     <button onclick="displayRandomImage1()">Mudar Imagem</button>
     </div>
     <div>
     <h1>Fotos Aleatórias de Gatos</h1>
     <img id="randomImage2" />
+    </div>
+    <div>
     <button onclick="displayRandomImage2()">Mudar Imagem</button>
     </div>
   </body>
