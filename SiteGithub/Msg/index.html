@@ -49,7 +49,7 @@
         };
         xhr.send();
       }
-      function displayRandomImage3() 
+      function displayRandomImage3() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "https://api.pexels.com/v1/random/?client_id=WsEKoOkvPUW722ZJTSy837yOu8GCl3FfrIeQ7hWHSkp720JfYKoV3lLS&query=tree", true);
         xhr.onreadystatechange = function() {
@@ -58,8 +58,10 @@
             var imageUrl = response.urls.regular;
             document.getElementById("randomImage3").src = imageUrl;
           }
-          xhr.send();
         };
+          xhr.send();
+      }
+
     </script>
     <style>
       /* Estilo do corpo da página */
