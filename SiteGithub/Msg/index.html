@@ -9,7 +9,8 @@
         // Criar uma nova instância do objeto XMLHttpRequest
         var xhr = new XMLHttpRequest();
         // Abrir uma solicitação GET para a API do Unsplash
-        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=DCDrOEiDqi_MpRowTK6Mz5iQy85Swz3TxEKCJP3OrVk&query=bible%20message", true);
+        xhr.open("GET", `https://api.unsplash.com/photos/random/?client_id=${process.env.tokenUnsplash}&query=cat%20message`, true);
+
         // Configurar a função de retorno de chamada
         xhr.onreadystatechange = function() {
           // Verificar se a solicitação foi concluída com sucesso
@@ -24,42 +25,6 @@
         };
         // Enviar a solicitação
         xhr.send();
-      }
-      function displayRandomImage1() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=CDrOEiDqi_MpRowTK6Mz5iQy85Swz3TxEKCJP3OrVk&query=birds", true);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            var imageUrl = response.urls.regular;
-            document.getElementById("randomImage1").src = imageUrl;
-          }
-        };
-        xhr.send();
-      }
-      function displayRandomImage2() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.unsplash.com/photos/random/?client_id=CDrOEiDqi_MpRowTK6Mz5iQy85Swz3TxEKCJP3OrVk&query=cats", true);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            var imageUrl = response.urls.regular;
-            document.getElementById("randomImage2").src = imageUrl;
-          }
-        };
-        xhr.send();
-      }
-      function displayRandomImage3() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.pexels.com/v1/random/?client_id=WsEKoOkvPUW722ZJTSy837yOu8GCl3FfrIeQ7hWHSkp720JfYKoV3lLS&query=tree", true);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            var imageUrl = response.urls.regular;
-            document.getElementById("randomImage3").src = imageUrl;
-          }
-        };
-          xhr.send();
       }
 
     </script>
@@ -143,5 +108,3 @@
 </html>
 
 <!-- Deploy da página ok, end: https://diego-dba.github.io/SiteGithub/Msg/-->
-
-<!-- Nova API Pexels -->
