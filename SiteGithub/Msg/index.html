@@ -9,7 +9,7 @@
         // Criar uma nova instância do objeto XMLHttpRequest
         var xhr = new XMLHttpRequest();
         // Abrir uma solicitação GET para a API do Unsplash
-        xhr.open("GET", `https://api.unsplash.com/photos/random/?client_id=${process.env.tokenUnsplash}&query=cat%20message`, true);
+        xhr.open("GET", `https://api.unsplash.com/photos/random/?client_id=${process.env.tokenUnsplash}&query=cat`, true);
 
         // Configurar a função de retorno de chamada
         xhr.onreadystatechange = function() {
@@ -80,9 +80,12 @@
     <!-- Imagem para exibir a mensagem bíblica aleatória -->
     <img id="randomImage" />
     </div>
-    
-    /*<div>
-    <!-- Botão para alterar a imagem -->
+  </body>
+</html>
+
+    <!-- 
+    <div>
+    Botão para alterar a imagem 
     <button onclick="displayRandomImage()">Mudar Imagem</button>
     </div>
     <div>
@@ -104,8 +107,6 @@
     </div>
     <div>
     <button onclick="displayRandomImage3()">Mudar Imagem</button>
-    </div> */
-  </body>
-</html>
+    </div> -->
 
 <!-- Deploy da página ok, end: https://diego-dba.github.io/SiteGithub/Msg/-->
